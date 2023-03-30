@@ -11,6 +11,13 @@ const cls = document.getElementById('cls');
 const bac = document.getElementById('main-bacground');
 const hd = document.getElementById('header-nav');
 const clse = document.getElementById('clse');
+const btn2 = document.getElementById('btn2');
+const sct2 = document.getElementById('boxing');
+const sct3 = document.getElementById('sct-3');
+const hsb = document.getElementById('h-s-b');
+const hdss = document.getElementById('hidden-s');
+const cll = document.getElementById('cll');
+const hds = document.getElementById('hidden-s');
 
 
 
@@ -22,7 +29,9 @@ const func = function(){
     h.style.background = "none";
     hd.style.display = "flex";
     btn.style.display = "none";
-    clse.style.display = "inline-block";
+    clse.style.display = "flex";
+    clse.style.textDecoration = "none";
+    clse.style.border = "none";
 }
 
 btn.addEventListener("click", func);
@@ -47,7 +56,26 @@ const fun3 = function(){
     grp.style.display = "flex";
     h.style.background = "rgba(0, 0, 0, 0.4)";
     mainS.style.background = "rgba(0, 0, 0, 0.0)";
-    clse.preventDefault();
+    clse.style.display = "none";
+    btn.style.display = "flex";
+    clse.style.textDecoration = "none";
 }
 
 clse.addEventListener('click', fun3);
+
+const fun4 = function(){
+    hsb.style.background = "rgba(0, 0, 0, 0.8)";
+    sct2.style.background = "rgba(0, 0, 0, 0.0)";
+    hdss.style.display = "grid"
+    sct3.style.display = "none";
+}
+
+btn2.addEventListener('click', fun4);
+
+const func5 = function(){
+    hds.style.display = "none";
+    sct3.style.display = "grid";
+    hsb.style.background = "#fff";
+}
+
+cll.addEventListener('click', func5);
